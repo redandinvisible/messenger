@@ -1,5 +1,13 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Send a message to the house
+
+  h2 The last message sent was: #{last_message}
+
+  form(method='POST' action='/lightupmessage')
+    div.input
+      h3 OMG WTF GTFO
+      textarea(name="message", cols="40", rows="5")
+    div.actions
+      input(type="submit", value="SEND")
